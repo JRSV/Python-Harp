@@ -20,7 +20,7 @@ def unpack_pedals(argument, position_pedals, pedal_number):
 
 #######################################################################
 
-def l_unique(seq): 
+def l_unique(seq):
    # order preserving
    checked = []
    for e in seq:
@@ -47,38 +47,38 @@ def l_unique(seq):
 ####################################
 
 def pack_uniques(packed,to_be_p):
-		packed = list(packed)
-		to_be_p = list(to_be_p)
-		hits = 0
-		
-		#function looks to see if the list that is going to be added,
-		#is already in the final list.
-		
-		for pack in packed:
-				n = 0
+    packed = list(packed)
+	to_be_p = list(to_be_p)
+	hits = 0
 
-				if len(packed) > 0:
-						for b in pack:
-								for a in to_be_p:
-										if b == a:
-												n = n + 1
-										else:
-												n = n
-						if n == 7:
-								n=0
-								hits += 1
-						else:
-								hits = hits
-		if hits == 0:
-			    packed.append(to_be_p)
-		return packed	
+	#function looks to see if the list that is going to be added,
+	#is already in the final list.
+
+	for pack in packed:
+		n = 0
+
+		if len(packed) > 0:
+			for b in pack:
+				for a in to_be_p:
+					if b == a:
+						n = n + 1
+					else:
+						n = n
+	if n == 7:
+		n=0
+		hits += 1
+	else:
+		hits = hits
+	if hits == 0:
+		    packed.append(to_be_p)
+	return packed
 
 ####################################################################################
 # This function, return all possible unique 7 pedal combinations of the Harp pedals
 
 def pedalCombination(argument):
 
-	finalList = [ ]
+    finalList = [ ]
 	pedals = list(argument)
 	numPedals = len(argument)
 
@@ -109,4 +109,3 @@ def pedalCombination(argument):
 finalList = pedalCombination(argument)
 print len(finalList)
 print finalList
-
