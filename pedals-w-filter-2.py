@@ -55,8 +55,7 @@ def pack_uniques(packed,to_be_p):
 	#is already in the final list.
 
 	for pack in packed:
-		n = 0
-
+        n = 0
 		if len(packed) > 0:
 			for b in pack:
 				for a in to_be_p:
